@@ -13,7 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AppConfigStore.shared.set(AppConfig(
+            environment: "production",
+            baseURL: "https://api.chucknorris.io",
+            baseImageURL: "https://api.chucknorris.io/img"
+        ))
         return true
     }
 

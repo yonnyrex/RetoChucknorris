@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="chucknorris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uvf-a5-2Al">
+                                <rect key="frame" x="146.66666666666666" y="218" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Iov-7Y-DLK"/>
+                                    <constraint firstAttribute="width" constant="100" id="gbn-T2-10H"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-jy-ijb">
+                                <rect key="frame" x="19.666666666666657" y="358" width="353.66666666666674" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdu-W1-xnX">
+                                <rect key="frame" x="39.333333333333343" y="684" width="314.33333333333326" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gos-wc-tdf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ACTUALIZAR">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2C-fx-J21"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-tD-jc1">
+                                <rect key="frame" x="186.66666666666666" y="441" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rdu-W1-xnX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1cP-iD-5FH"/>
+                            <constraint firstItem="mnW-jy-ijb" firstAttribute="top" secondItem="uvf-a5-2Al" secondAttribute="bottom" constant="40" id="9Uy-KA-0b4"/>
+                            <constraint firstItem="mnW-jy-ijb" firstAttribute="centerX" secondItem="uvf-a5-2Al" secondAttribute="centerX" id="B83-Fs-y4F"/>
+                            <constraint firstItem="mnW-jy-ijb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="H7c-km-hlY"/>
+                            <constraint firstItem="Rdu-W1-xnX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Ldp-Ni-5ID"/>
+                            <constraint firstItem="ea9-tD-jc1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ciu-MQ-zfO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rdu-W1-xnX" secondAttribute="bottom" constant="50" id="hSR-Ag-Mcx"/>
+                            <constraint firstItem="uvf-a5-2Al" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hlD-iK-Zix"/>
+                            <constraint firstItem="uvf-a5-2Al" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pWZ-Bd-kYi"/>
+                            <constraint firstItem="ea9-tD-jc1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yMv-Db-cZH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ea9-tD-jc1" id="6sD-3d-Dpi"/>
+                        <outlet property="avatarImageView" destination="uvf-a5-2Al" id="me9-hV-c87"/>
+                        <outlet property="fetchButton" destination="Rdu-W1-xnX" id="My0-IN-Q1S"/>
+                        <outlet property="jokeLabel" destination="mnW-jy-ijb" id="cXP-0v-FpH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
